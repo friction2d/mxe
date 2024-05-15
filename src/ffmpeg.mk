@@ -1,14 +1,17 @@
 # This file is part of MXE. See LICENSE.md for licensing information.
+#
+# DO NOT BUMP VERSION UNTIL ISSUES WITH 4.3+ IS RESOLVED!
+#
 
 PKG             := ffmpeg
 $(PKG)_WEBSITE  := https://ffmpeg.org/
 $(PKG)_IGNORE   :=
-$(PKG)_VERSION  := 4.4.4
-$(PKG)_CHECKSUM := e80b380d595c809060f66f96a5d849511ef4a76a26b76eacf5778b94c3570309
+$(PKG)_VERSION  := 4.2.9
+$(PKG)_CHECKSUM := 4974d62e7507ba3b26fa5f30af8ee36825917ddb4a1ad4118277698c1c8818cf
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_URL      := https://ffmpeg.org/releases/$($(PKG)_FILE)
-$(PKG)_DEPS     := cc bzip2 lame libvpx theora vorbis x264 xvidcore yasm zlib libheif
+$(PKG)_DEPS     := cc bzip2 lame libvpx theora vorbis x264 xvidcore yasm zlib aom x265
 
 # DO NOT ADD fdk-aac OR openssl SUPPORT.
 # Although they are free softwares, their licenses are not compatible with
